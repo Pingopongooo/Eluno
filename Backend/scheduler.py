@@ -11,7 +11,7 @@ def start_scheduler():
     For testing purposes, you can change 'hours=1' to 'minutes=1'.
     """
     # Runs exactly once an hour
-    scheduler.add_job(run_hourly_agent, 'interval', hours=8, id='ai_hourly_agent', replace_existing=True)
+    scheduler.add_job(run_hourly_agent, 'interval', hours=20, id='ai_hourly_agent', replace_existing=True)
     scheduler.start()
     print("APScheduler started: AI Agent will run every hour.")
 

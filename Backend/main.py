@@ -12,7 +12,7 @@ async def lifespan(app: FastAPI):
     yield
     scheduler.stop_scheduler()
 
-app = FastAPI(title="Eluno OMS API", lifespan=lifespan)
+app = FastAPI(title="AI OMS API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -24,7 +24,7 @@ app.add_middleware(
 
 @app.get("/")
 def health_check():
-    return {"status": "ok", "message": "Eluno OMS Backend is running."}
+    return {"status": "ok", "message": "AI OMS Backend is running."}
 
 @app.get("/api/lens-types")
 def get_lens_types():
